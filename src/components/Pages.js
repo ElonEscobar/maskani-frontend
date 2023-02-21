@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-import Header from './Header'
-import Footer from './Footer'
-import About from './About'
-import Property from './Property'
-import Classifieds from './Classifieds'
+import Header from './header/Header'
+import Footer from './footer/Footer'
+import About from './about/About'
+import Property from './property/Property'
+import Classifieds from './classifieds/Classifieds'
 import Home from './Home'
-import Contact from './Contact'
+import Contact from './contact/Contact'
 
 function Pages() {
   return (
