@@ -1,12 +1,20 @@
 import React from 'react'
+import './header.css'
 import { NavLink } from 'react-router-dom'
 
 function Header() {
   return (
     <div className='nav'>
-        <ul>
+        <ul className='navlinks'>
             <li>
                 <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+                <NavLink to="/properties" >Properties</NavLink>
+            </li>
+            
+            <li>
+                <NavLink to="/classified" >Classifieds</NavLink>
             </li>
             <li>
                 <NavLink to="/about">About</NavLink>
@@ -14,12 +22,7 @@ function Header() {
             <li>
                 <NavLink to="/contact">Contact</NavLink>
             </li>
-            <li>
-                <NavLink to="/classified" >Classifieds</NavLink>
-            </li>
-            <li>
-                <NavLink to="/properties" >properties</NavLink>
-            </li>
+            
 
         </ul>
     </div>
