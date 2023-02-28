@@ -1,0 +1,29 @@
+.footer {
+    background-color: rgb(5, 61, 126);
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer p {
+    text-align: center;
+    color: antiquewhite;
+  }
+
+  .links a {
+    font-size: 1rem;
+ 
+  }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .socials a {
+    margin-left: 30px; 
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+  }

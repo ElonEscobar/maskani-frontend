@@ -17,10 +17,7 @@ function Header() {
                 <NavLink to="/classified" >Classifieds</NavLink>
             </li>
             <li>
-                <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/auction">Auction</NavLink>
             </li>
             
 
