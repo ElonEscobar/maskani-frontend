@@ -22,6 +22,7 @@ function Pages() {
                 <Route exact path='/' element={<Home/>} />
 
             </Routes>
+            <Footer />
         </Router>
     </>
   )

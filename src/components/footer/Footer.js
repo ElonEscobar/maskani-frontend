@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import './footer.css'
+import { NavLink } from 'react-router-dom'
 
 
 function Footer() {
@@ -7,13 +8,23 @@ function Footer() {
   
   return (
     <div className="footer">
-      <nav>
-        <ul>
-        <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
-      </nav>
+
+      <div className='links'>
+
+            <li>
+                <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+                <NavLink to="/contact">Contact</NavLink>
+            </li>
+      </div>
+
+      <div className="socials">
+            <a href='https://www.facebook.com/' title="follow us on Facebook" className="fa fa-facebook" target='_blank'></a>
+            <a href='https://www.instagram.com/' title="follow us on instagram" className="fa fa-instagram" target='_blank'></a>
+            <a href='https://twitter.com/' title="follow us on twitter" className="fa fa-twitter" target='_blank'></a>
+      </div>
+
       <p>&copy; {currentYear} My Website. All rights reserved.</p>
 
   </div>

@@ -1,15 +1,29 @@
 .footer {
-    background-color: #f5f5f5;
+    background-color: rgb(5, 61, 126);
     padding: 10px;
     text-align: center;
-  }
-
-  /* make the links blue and underlined, and to center the footer text: */
-  .footer nav ul li a {
-    color: blue;
-    text-decoration: underline;
   }
   
   .footer p {
     text-align: center;
+    color: antiquewhite;
+  }
+
+  .links a {
+    font-size: 1rem;
+ 
+  }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .socials a {
+    margin-left: 30px; 
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
   }
