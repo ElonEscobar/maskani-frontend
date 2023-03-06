@@ -15,10 +15,11 @@ function Property() {
           </div>
         </div>
         <div className='details'>
-          <div>
+          <div className='home-details'>
             <span>Flat Name</span>
+            <span>location</span>
           </div>
-          <div className='price'>5999</div>
+          <div className='price'>Ksh 5999</div>
         </div>
       </div>
       <div className='main-card'>
@@ -32,11 +33,11 @@ function Property() {
           </div>
         </div>
         <div className='details'>
-          <div>
+          <div className='home-details'>
             <span>Flat Name</span>
             <span>location</span>
           </div>
-          <div className='price'>4999</div>
+          <div className='price'>Ksh 4999</div>
         </div>
       </div>
      
