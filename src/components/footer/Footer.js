@@ -25,7 +25,7 @@ function Footer() {
             <a href='https://twitter.com/' title="follow us on twitter" className="fa fa-twitter" target='_blank'></a>
       </div>
 
-      <p>&copy; {currentYear} My Website. All rights reserved.</p>
+      <p>&copy; {currentYear} Maskani Kenya. All rights reserved.</p>
 
   </div>
 );

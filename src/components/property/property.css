@@ -7,15 +7,77 @@
 }
 
 .main-card{
+    border-radius: 20px;
     border: 2px solid blue;
     min-width: 25%;
     height: 320px;
-    margin: 15px ;
+    margin: 15px;
 }
 
 .card-img{
+    border-radius: 20px;
     border: 2px solid red;
-    width: 100%;
     height: 250px;
+    position: relative;
+
+}
+.home-img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
     
+}
+.type{
+    position:relative;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 3px;
+    width: 40%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+button{
+    position: relative;
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-top: 50%;
+    padding: 3px;
+    border: none;
+    font-size: 1.1rem;
+    transition-duration: 0.3s;
+}
+button:hover{
+    font-size: 1.2rem;
+    color: rgb(0, 204, 255);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+@media only screen and (max-width: 600px) {
+    button {
+      margin-top: 40%;
+      
+    }
+    .flats{
+        flex-direction: column;
+        margin: auto;
+    }
+    .main-card{
+        
+        border-radius: 20px;
+        min-width: 25%;
+        height: 320px;
+        margin: 15px ;
+    }
+}
+@media only screen and (min-width: 992px) {
+    button {
+      margin-top: 40%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    button {
+      margin-top: 30%;
+    }
 }
