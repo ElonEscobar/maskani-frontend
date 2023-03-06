@@ -1,0 +1,117 @@
+.flats{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+
+}
+
+.main-card{
+    border-radius: 20px;
+    min-width: 27%;
+    height: 350px;
+    margin: 15px;
+    box-shadow: 3px 4px 10px rgb(5, 61, 126) inset;
+}
+.main-card:hover{
+    box-shadow: 2px 4px 10px rgb(0, 204, 255)  ;
+
+}
+
+.card-img{
+    border-radius: 20px;
+    height: 250px;
+    position: relative;
+
+}
+.home-img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 20px;
+    
+}
+.type{
+    position:relative;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 3px;
+    width: 40%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+button{
+    position: relative;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-left: 30%;
+    margin-top: 50%;
+    padding: 3px;
+    border: none;
+    font-size: 1.3rem;
+    transition-duration: 0.3s;
+    background-color: transparent;
+
+}
+button:hover{
+    font-size: 1.2rem;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: rgb(5, 61, 126);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.home-details{
+    display: flex;
+    justify-content: space-between;
+}
+.home-details span {
+    font-weight: 600;
+    margin: 5px 10px ;
+    font-size: 1.5rem;
+}
+
+.price{
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 10px;
+    
+}
+@media only screen and (max-width: 600px) {
+    button {
+      margin-top: 40%;
+      background-color: rgb(0, 204, 255);
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+    button:hover{
+        color: rgb(5, 61, 126);
+        text-decoration: none;
+
+    }
+    .flats{
+        flex-direction: column;
+        margin: auto;
+    }
+    .main-card{
+        
+        border-radius: 20px;
+        min-width: 25%;
+        height: 320px;
+        margin: 15px ;
+    }
+    .home-details span {
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    button {
+      margin-top: 40%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    button {
+      margin-top: 30%;
+    }
+}
