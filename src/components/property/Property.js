@@ -8,7 +8,7 @@ function Property() {
         <div className='card-img'>
           <img alt='home-img' src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG9tZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' className='home-img'/>
           <div className='type'>
-            <span>For Sale</span>
+            <span>For Rent</span>
           </div>
           <div className='m-button'>
             <button>More details</button>
@@ -37,7 +37,7 @@ function Property() {
             <span>Flat Name</span>
             <span>location</span>
           </div>
-          <div className='price'>Ksh 4999</div>
+          <div className='price'>Ksh 8999</div>
         </div>
       </div>
      
