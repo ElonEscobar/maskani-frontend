@@ -1,4 +1,5 @@
 import React from 'react'
+import { BiCurrentLocation } from 'react-icons/bi'
 import './property.css'
 
 function Property() {
@@ -16,8 +17,8 @@ function Property() {
         </div>
         <div className='details'>
           <div className='home-details'>
-            <span>Flat Name</span>
-            <span>location</span>
+            <span className='home-name'>Flat Name</span>
+            <span className='location'><BiCurrentLocation />location</span>
           </div>
           <div className='price'>Ksh 5999</div>
         </div>
@@ -34,8 +35,8 @@ function Property() {
         </div>
         <div className='details'>
           <div className='home-details'>
-            <span>Flat Name</span>
-            <span>location</span>
+            <span className='home-name'>Flat Name</span>
+            <span className='location'><BiCurrentLocation />location</span>
           </div>
           <div className='price'>Ksh 8999</div>
         </div>

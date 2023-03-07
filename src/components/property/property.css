@@ -70,7 +70,12 @@ button:hover{
     margin: 5px 10px ;
     font-size: 1.5rem;
 }
-
+.location{
+    color: rgb(5, 61, 126);
+}
+.home-name{
+    cursor: pointer;
+}
 .price{
     font-size: 1.4rem;
     font-weight: 400;
