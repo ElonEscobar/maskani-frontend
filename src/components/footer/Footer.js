@@ -20,9 +20,9 @@ function Footer() {
       </div>
 
       <div className="socials">
-            <a href='https://www.facebook.com/' title="follow us on Facebook" className="fa fa-facebook" target='_blank'></a>
-            <a href='https://www.instagram.com/' title="follow us on instagram" className="fa fa-instagram" target='_blank'></a>
-            <a href='https://twitter.com/' title="follow us on twitter" className="fa fa-twitter" target='_blank'></a>
+            <a href='https://www.facebook.com/' title="follow us on Facebook" className="fa fa-facebook" target='blank'> </a>
+            <a href='https://www.instagram.com/' title="follow us on instagram" className="fa fa-instagram" target='blank'> </a>
+            <a href='https://twitter.com/' title="follow us on twitter" className="fa fa-twitter" target='blank'> </a>
       </div>
 
       <p>&copy; {currentYear} Maskani Kenya. All rights reserved.</p>
