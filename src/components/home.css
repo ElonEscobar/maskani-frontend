@@ -5,10 +5,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+.home{
+    border: 2px solid red;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
 
-img {
+.home img {
     background-size: cover;
     width: 100%;
-    height: 100vh;
-    position:static;
+    height: 100%;
+    position: absolute;
+}
+
+.home-intro{
+    position: relative;
 }
