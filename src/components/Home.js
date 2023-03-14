@@ -1,5 +1,7 @@
 import React from 'react'
 import './home.css'
+import { IoHomeSharp } from 'react-icons/io5'
+import Property from './property/Property'
 
 function Home() {
   return (
@@ -12,7 +14,17 @@ function Home() {
           <p>Maskani Kenya is the trusted resource for home buyers, sellers, and dreamers offering the most comprehensive source of for-sale or rent properties</p>
           
           <button>Read More</button>
+          <IoHomeSharp className='home-icon'/>
+
         </div>
+      </div>
+      <div className="recent-properties">
+        
+        <div className='r-header'>
+          <h1>Recent Properties </h1>
+          <h3>View recently posted properties</h3>
+        </div>
+        <Property />  
       </div>      
     </>
   )
