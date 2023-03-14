@@ -20,8 +20,11 @@
 }
 
 .home-intro{
+    display: flex;
+    flex-direction: column;
     position: relative;
     text-align: center;
+    align-items: center;
     top: 45%;
     color: #fff;
     animation: slideFromBottom 1.6s ease-in-out;
@@ -53,6 +56,7 @@
 .home-intro button{
     color: black;
     border: 3px solid #fff;
+    width: 10%;
     padding: 10px;
     border-radius: 5px;
     margin: 20px;
@@ -68,6 +72,23 @@
     box-shadow: 3px 5px 5px #ff1744;
     border: none;
     color: white;
+}
+
+.r-header{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.r-header h1{
+    font-size: 2rem;
+    font-weight: 600;
+    
+}
+.r-header h3{
+    font-size: 1.2rem;
+}
+.home-icon{
+    animation: animateIcons 3s ease-in-out 1s infinite;
 }
 
 @keyframes slideFromBottom {
@@ -86,5 +107,26 @@
 
     100%{
         transform: translateY(0);
+    }
+}
+
+@keyframes animateIcons {
+    0%{
+        color: rgb(5, 61, 126);
+        font-size: 3rem;
+    }
+    20%{
+        color: rgb(22, 27, 110);
+    }
+    50%{
+        color: rgb(31, 5, 126);
+        font-size:2rem;
+    }
+    80%{
+        color: rgb(126, 5, 90);
+    }
+    100%{
+        color: #ff1744;
+        font-size: 3rem;
     }
 }
