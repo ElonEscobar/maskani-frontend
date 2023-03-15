@@ -74,10 +74,13 @@
     color: white;
 }
 
-.r-header{
+.cl-header, .r-header{
     text-align: center;
     padding-top: 30px;
     padding-bottom: 10px;
+}
+.cl-header h1{
+    margin-top: 3%;
 }
 .r-header h1{
     font-size: 2rem;
@@ -91,6 +94,68 @@
     animation: animateIcons 3s ease-in-out 1s infinite;
 }
 
+
+/* Middle header sign up ad */
+.middle{
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid #ff1744;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    background: #ff1744;
+    
+}
+.middle .ad{
+    /* border: 3px solid red; */
+    transform: skewX(-40deg);
+    padding: 20px;
+    font-size: 2rem;
+    width: 20%;
+    color: #fff;
+    background: #ff1744;
+}
+.middle .ad >*{
+    transform: skewX(40deg);
+
+}
+.middle .sign-ad{
+    /* border: 3px solid blue; */
+    transform: skewX(-40deg);
+    padding: 20px;
+    width: 80%;
+    font-size: 1.2rem;
+    background: #fff;
+
+}
+.sign-ad button{
+    color: #ff1744;
+    width: 200px;
+    margin-left: 30%;
+    margin-top: 2%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid #ff1744;
+
+    transition: all .7s;
+}
+.middle .sign-ad >*{
+    transform: skewX(40deg);
+}
+.sign-ad span{
+    color: rgb(5, 61, 126);
+}
+.sign-ad button:hover{
+    color: #fff;
+    box-shadow: 5px 10px 8px #ff1744;
+    background: #ff1744;
+    cursor: pointer;
+    font-size: 1.4rem;
+
+}
+
+/* Animations */
 @keyframes slideFromBottom {
     0%{
         transform: translateY(100%);

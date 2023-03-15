@@ -2,10 +2,12 @@ import React from 'react'
 import './home.css'
 import { IoHomeSharp } from 'react-icons/io5'
 import Property from './property/Property'
+import Classifieds from './classifieds/Classifieds'
 
 function Home() {
   return (
     <>
+      {/* Home page img section */}
       <div className="home">
         <img src="https://i.ibb.co/TtM2ckm/home-background.jpg" alt="home-background" border="0"></img>
         <div className='home-intro'>
@@ -18,13 +20,36 @@ function Home() {
 
         </div>
       </div>
+
+      {/* Recents properties section */}
       <div className="recent-properties">
         
         <div className='r-header'>
-          <h1>Recent Properties </h1>
+          <h1>RECENT PROPERTIES</h1>
           <h3>View recently posted properties</h3>
         </div>
         <Property />  
+      </div>
+
+      {/* ad header */}
+      <div className='middle'>
+        <div className='ad'>
+          <p>Find your</p>
+          <h3>Customers here</h3>
+        </div>
+        <div className='sign-ad'>
+          <h2><span>Sign up</span> with us now and start advertising your properties here</h2>
+          <button>Get started</button>
+        </div>
+      </div>
+    
+      {/* Classifieds section */}
+      <div className="recent-classifieds">
+        <div className='cl-header'>
+          <h1>CLASSIFIEDS</h1>
+          <h3>Get professional service from our experts</h3>
+        </div>
+        <Classifieds />  
       </div>      
     </>
   )
