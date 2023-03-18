@@ -8,6 +8,7 @@ import Property from './property/Property'
 import Classifieds from './classifieds/Classifieds'
 import Home from './Home'
 import Contact from './contact/Contact'
+import Auth from './auth/Auth'
 
 function Pages() {
   return (
@@ -15,6 +16,7 @@ function Pages() {
         <Router>
             <Header />
             <Routes>
+                <Route exact path='/auth' element={<Auth />} />
                 <Route exact path='/about' element={<About/>} />
                 <Route exact path='/properties' element={<Property/>} />
                 <Route exact path='/contact' element={<Contact/>} />
