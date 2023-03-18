@@ -119,6 +119,7 @@
     transform: skewX(40deg);
 
 }
+
 .middle .sign-ad{
     /* border: 3px solid blue; */
     transform: skewX(-40deg);
@@ -128,18 +129,24 @@
     background: #fff;
 
 }
-.sign-ad button{
-    color: #ff1744;
+.sign-ad button {
     width: 200px;
     margin-left: 30%;
-    margin-top: 2%;
+    margin-top: 3%;
     font-size: 1.3rem;
     font-weight: 600;
     border-radius: 5px;
     border: 2px solid #ff1744;
+    transform: skewX(40deg);
+
 
     transition: all .7s;
 }
+.sign-ad button a{
+    text-decoration: none;
+    color: #ff1744;
+}
+
 .middle .sign-ad >*{
     transform: skewX(40deg);
 }
@@ -147,12 +154,17 @@
     color: rgb(5, 61, 126);
 }
 .sign-ad button:hover{
-    color: #fff;
     box-shadow: 5px 10px 8px #ff1744;
-    background: #ff1744;
     cursor: pointer;
     font-size: 1.4rem;
-
+    color: #ff1744;
+    
+}
+.sign-ad h2{
+    margin-left: 4%;
+}
+.sign-ad h2 a{
+    text-decoration: none;
 }
 
 /* Animations */

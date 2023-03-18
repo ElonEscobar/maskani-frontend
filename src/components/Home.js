@@ -3,6 +3,7 @@ import './home.css'
 import { IoHomeSharp } from 'react-icons/io5'
 import Property from './property/Property'
 import Classifieds from './classifieds/Classifieds'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -38,8 +39,8 @@ function Home() {
           <h3>Customers here</h3>
         </div>
         <div className='sign-ad'>
-          <h2><span>Sign up</span> with us now and start advertising your properties here</h2>
-          <button>Get started</button>
+          <h2><Link to='/auth'><span> Sign up </span></Link> with us now and start advertising your properties here</h2>
+          <Link to='/auth'><button>Get started</button></Link>
         </div>
       </div>
     
