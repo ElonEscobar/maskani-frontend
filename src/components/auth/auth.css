@@ -57,3 +57,8 @@ button:hover{
     border: none;
     color: white;
 }
+
+.category-select{
+    font-size: 1.3rem;
+    padding: 5px;
+}
