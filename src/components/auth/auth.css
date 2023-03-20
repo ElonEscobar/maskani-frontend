@@ -1,0 +1,59 @@
+.auth{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 5%;
+}
+.login, .signup{
+    margin-top: 2%;
+
+}
+
+.log-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.log-inputs input{
+    margin: 10px 0;
+    height: 5vh;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.log-inputs input:hover {
+    border: 3px solid #ff1744;
+
+}
+.login p, .signup p{
+    font-size: 1.2rem;
+
+}
+.login h2, .signup h2{
+    font-size: 1.5rem;
+    color: #ff1744;
+    margin-bottom: 3%;
+}
+.names .first-name{
+    margin-right: 20px;
+}
+button{
+    background-color: rgb(5, 61, 126);
+    color: #fff;
+    padding: 10px;
+    width: 40%;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+button:hover{
+    background-color: #ff1744;
+
+    cursor: pointer;
+    box-shadow: 3px 5px 5px #411f26;
+    border: none;
+    color: white;
+}
