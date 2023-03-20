@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import './auth.css'
 
 function Auth() {
+
+    const [errors, setErrors] = useState([]);
     const [userDetails, setUserDetails] = useState({
         first_name:'',
         last_name:'',
@@ -40,11 +42,66 @@ function Auth() {
     function handleSignup(e){
         e.preventDefault();
         console.log(userDetails);
+
+        const apiUrl = 'http://127.0.0.1:3000/users'
+
+        const signup = async () => {
+            let res = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: 'application/json'
+                },
+                body: JSON.stringify(userDetails)
+            });
+            if (res.status  > 199 && res.status < 300){
+                let data = await res.json();
+                console.log(data);
+            }else {
+                let err = await res.json();
+                setErrors(err);
+                console.log(errors);
+
+            }
+
+            
+        };
+        signup();
+        console.log('creating user:');
+
     }
+
 
     function handleLogin(e){
         e.preventDefault();
         console.log(loginDetails);
+
+        const apiUrl = 'http://127.0.0.1:3000/login';
+
+        async function login(){
+            let res = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json'
+                },
+                body: JSON.stringify(loginDetails)
+            });
+            
+            if (res.status  > 199 && res.status < 300){
+                let data = await res.json();
+                console.log(data);
+                localStorage.token = data.jwt;
+            }else {
+                let err = await res.json();
+                setErrors(err);
+                console.log(errors);
+            }
+        }
+        login();            
+        console.log('logging in')
+        
+
     }
   return (
     <>
