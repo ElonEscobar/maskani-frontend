@@ -1,11 +1,13 @@
 // Both the login and signup action is done in this file
 
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './auth.css'
 
-function Auth() {
+function Auth({ setIsLoggedIn }) {
 
     const [errors, setErrors] = useState([]);
+    const navigate = useNavigate();
     const [userDetails, setUserDetails] = useState({
         first_name:'',
         last_name:'',
@@ -92,14 +94,20 @@ function Auth() {
                 let data = await res.json();
                 console.log(data);
                 localStorage.token = data.jwt;
+                navigate("/");
+                setIsLoggedIn(true);
+
             }else {
                 let err = await res.json();
                 setErrors(err);
-                console.log(errors);
+
+                //res.json().then((err) => setErrors(err));
+
             }
         }
         login();            
         console.log('logging in')
+        console.log(errors);
         
 
     }
