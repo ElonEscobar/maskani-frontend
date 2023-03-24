@@ -24,7 +24,7 @@ ul.navlinks{
 
 }
 
-li{
+.navlinks li{
     
     margin: 0.5rem;
     margin-top: 2rem;
@@ -37,13 +37,13 @@ li{
     
 }
 
-li a{
+.navlinks li a{
     font-weight: 500;
     color: white;
     text-decoration: none;
 }
 
-li a:hover{
+.navlinks li a:hover{
     color: rgb(0, 204, 255);
 }
 
