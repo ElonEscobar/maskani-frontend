@@ -1,6 +1,7 @@
 import React from 'react'
 import './profile.css'
 import { NavLink } from 'react-router-dom'
+import { BiLogOutCircle } from 'react-icons/bi'
 
 function ProfileNav({ user }) {
   return (
@@ -21,6 +22,8 @@ function ProfileNav({ user }) {
               <NavLink to='/my-items'>My Items</NavLink>
             </li>
           </ul>
+
+          <button className='profile-nav-btn'> <BiLogOutCircle className='log-out-icon'/> Logout</button>
        </div>
 
      
