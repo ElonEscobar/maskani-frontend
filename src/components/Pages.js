@@ -9,9 +9,13 @@ import Classifieds from './classifieds/Classifieds'
 import Home from './Home'
 import Contact from './contact/Contact'
 import Auth from './auth/Auth'
+import Profile from './profile/Profile'
+import CreateProperty from './profile/CreateProperty'
+import CreateClassified from './profile/CreateClassified'
+import CreateItem from './profile/CreateItem'
 
 function Pages() {
-  
+
   // Auto-login 
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -50,6 +54,13 @@ function Pages() {
             <Header isLoggedIn={isLoggedIn}/>
             <Routes>
                 <Route exact path='/auth' element={<Auth setIsLoggedIn={setIsLoggedIn}/>} />
+                <Route exact path='/profile' element={<Profile user={user}/>} />
+                <Route exact path='/my-properties' element={<CreateProperty />}/>
+                <Route exact path='/my-classifieds' element={<CreateClassified />}/>
+                <Route exact path='/my-items' element={<CreateItem />}/>
+
+                
+
                 <Route exact path='/about' element={<About/>} />
                 <Route exact path='/properties' element={<Property/>} />
                 <Route exact path='/contact' element={<Contact/>} />

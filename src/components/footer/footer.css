@@ -8,11 +8,27 @@
     text-align: center;
     color: antiquewhite;
   }
+  .links li{
+    list-style: none;
+
+  }
 
   .links a {
-    font-size: 1rem;
- 
+    margin: 0.5rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    list-style: none;
+    font-size: 1.4rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
   }
+
+  .links li a:hover{
+    color: rgb(0, 204, 255);
+}
 
   .links{
     display: flex;
@@ -27,3 +43,4 @@
     text-decoration: none;
     color: white;
   }
+
