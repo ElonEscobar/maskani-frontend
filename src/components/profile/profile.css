@@ -46,3 +46,20 @@
     color: #ff1744;
     font-size: 1.6rem;
 }
+
+.profile .profile-nav-btn{
+    font-size: 1.3rem;
+    padding: 5px;
+    margin-top: 60%;
+    transition: all 0.4s ease; 
+    border-radius: 5px;
+}
+.profile .profile-nav-btn:hover{
+    font-size: 1.4rem;
+    box-shadow: 5px 3px 5px #ff1744;
+    cursor: pointer;
+}
+/* .log-out-icon{
+    font-weight: 800;
+    font-size: 2rem;
+} */
