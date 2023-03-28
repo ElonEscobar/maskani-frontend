@@ -19,7 +19,7 @@ function CreateProperty() {
     e.preventDefault();
     console.log(newProperty)
   }
-  
+
   return (
     <div className="create-property-container">
         <ProfileNav/>
@@ -62,6 +62,7 @@ function CreateProperty() {
             </form>
 
           </div>
+          {/*  */}
           <div className='my-properties'>
             <h2>Created Properties</h2>
 
