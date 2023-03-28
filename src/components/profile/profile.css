@@ -69,22 +69,22 @@
 /* END of profile-nav styling */
 
 /* Create Property */
-.create-properties, .create-classifieds{
+.create-properties, .create-classifieds, .create-items{
     margin: 5px;
     margin-bottom: 20px;
 }
-.create-properties h2, .create-classifieds h2{
+.create-properties h2, .create-classifieds h2, .create-items h2{
     font-family: 'Roboto Slab', serif;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.create-property>*, .create-classified>*{
+.create-property>*, .create-classified>*, .create-item>*{
     font-family: 'Roboto Slab', serif;
     font-size: 1.2rem;
     margin: 5px;
 }
-.create-new-property-button, .create-new-classified-button{
+.create-new-property-button, .create-new-classified-button, .create-new-item-button{
     margin-top: 20px;
     padding: 5px;
     border-radius: 5px;
@@ -93,18 +93,14 @@
     transition: all 0.5s ease;
     
 }
-.create-new-property-button:hover, .create-new-classified-button:hover{
+.create-new-property-button:hover, .create-new-classified-button:hover, .create-new-item-button:hover{
     background-color:  #ff1744;
     cursor: pointer;
     color: white;
     box-shadow: 3px 3px 5px rgb(0, 204, 255);
 }
 
-/*  */
-.create-property-form{
-    border: 2px solid red;
 
-}
-.my-properties, .my-classifieds{
+.my-properties, .my-classifieds, .my-items{
     margin-top: 5%;
 }
