@@ -5,19 +5,51 @@ import { BiCurrentLocation } from 'react-icons/bi'
 import '../property/property.css'
 
 function CreateProperty() {
-  const [newProperty, setNewProperty] = useState({
-    img: '',
-    name: '',
-    location: '',
-    description: '',
-    amenities: [],
-    propertyType: '',
-    price: ''
-  })
+  
+  const [name, setName] = useState('')
+  const [location, setLocation] = useState('')
+  const [description, setDescription] = useState('')
+  const [amenities, setAmenities] = useState('')
+  const [pType, setPType] = useState('')
+  const [price, setPrice] = useState('')
+  const [image, setImage] = useState(null)
+
+  const apiUrl = "http://127.0.0.1:3000/properties"
+  const [errors, setErrors] = useState()
+  const token = localStorage.token
+  
 
   function handleCreateProperty(e){
     e.preventDefault();
-    console.log(newProperty)
+
+    const formData = new FormData();
+    formData.append('name', name)
+    formData.append('location', location)
+    formData.append('description', description)
+    formData.append('amenities', amenities)
+    formData.append('property_type', pType)
+    formData.append('price', price)
+    formData.append('image', image)
+
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+      body: formData
+    }).then(res => res.json()).then((data) => {
+      console.log('success');
+      console.log(data);
+
+    }).catch((err) => {
+      setErrors(err)
+      console.log('something went wrong');
+      console.log(errors);
+    });
+  }
+  
+  function handleImage(e){
+    setImage(e.target.files[0])
   }
 
   return (
@@ -28,34 +60,34 @@ function CreateProperty() {
 
           <div className='create-property-form'>
             <form className='create-property' onSubmit={handleCreateProperty}>
-              <label id='property-img' className='property-img-label'>Property Image</label>
-              <input required type='file' accept='image/*' id='property-img' className='property-img' value={newProperty.img} onChange={(e)=> setNewProperty({...newProperty, img: e.target.value})}/>
+              <label htmlFor='property-img' className='property-img-label'>Property Image</label>
+              <input required type='file' accept='image/*' id='property-img' className='property-img'  onChange={handleImage}/>
               <br/>
-              <label id='property-name' className='property-name-label'>Property name</label>
-              <input required type='text' id='property-name' className='property-name' value={newProperty.name} onChange={(e)=> setNewProperty({...newProperty, name: e.target.value})}/>
-              <br/>
-
-              <label id='property-location'className='property-location-label'>Property location</label>
-              <input required type='text' id='property-location' className='property-location' value={newProperty.location} onChange={(e)=> setNewProperty({...newProperty, location: e.target.value})}/>
+              <label htmlFor='property-name' className='property-name-label'>Property name</label>
+              <input required type='text' id='property-name' className='property-name' value={name} onChange={e => setName(e.target.value)}/>
               <br/>
 
-              <label id='property-desc'className='property-desc-label'>Property description</label>
-              <textarea required type='field' id='property-desc' rows={1} cols={20} className='property-desc' value={newProperty.description} onChange={(e)=> setNewProperty({...newProperty, description: e.target.value})}/>
+              <label htmlFor='property-location'className='property-location-label'>Property location</label>
+              <input required type='text' id='property-location' className='property-location' value={location} onChange={e => setLocation(e.target.value)}/>
               <br/>
 
-              <label id='property-amenities'className='property-amenities-label'>Property amenities</label>
-              <input type='text' id='property-amenities' className='property-amenities' value={newProperty.amenities} onChange={(e)=> setNewProperty({...newProperty, amenities: e.target.value})}/>
+              <label htmlFor='property-desc'className='property-desc-label'>Property description</label>
+              <textarea required type='field' id='property-desc' rows={1} cols={20} className='property-desc' value={description} onChange={e => setDescription(e.target.value)}/>
               <br/>
 
-              <label id='property-type'className='property-type-label'>Type of property</label>
-              <select  className='property-type' id='property-type' value={newProperty.propertyType} onChange={(e)=> setNewProperty({...newProperty, propertyType: e.target.value})}>
+              <label htmlFor='property-amenities'className='property-amenities-label'>Property amenities</label>
+              <input type='text' id='property-amenities' className='property-amenities' value={amenities} onChange={e => setAmenities(e.target.value)}/>
+              <br/>
+
+              <label htmlFor='property-type'className='property-type-label'>Type of property</label>
+              <select  className='property-type' id='property-type' onChange={e => setPType(e.target.value)}>
                 <option>For Sale</option>
                 <option>For Rent</option>
               </select>
               <br/>
 
-              <label id='property-price'className='property-price-label'>Price</label>
-              <input required type='text' id='property-price' className='property-price' value={newProperty.price} onChange={(e)=> setNewProperty({...newProperty, price: e.target.value})}/>
+              <label htmlFor='property-price'className='property-price-label'>Price</label>
+              <input required type='number' id='property-price' className='property-price' value={price} onChange={e => setPrice(e.target.value)}/>
               <br/>
 
               <button type='submit' className='create-new-property-button'>create property</button>
