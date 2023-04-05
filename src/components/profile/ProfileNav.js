@@ -1,9 +1,16 @@
 import React from 'react'
 import './profile.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { BiLogOutCircle } from 'react-icons/bi'
 
-function ProfileNav({ user }) {
+function ProfileNav({ user, isLoggedIn }) {
+  const navigate = useNavigate()
+
+  function handleLogout(){
+    localStorage.token = ''
+    navigate('/')
+    isLoggedIn(false);
+  }
   return (
     <>
        <div className="profile">
@@ -23,7 +30,7 @@ function ProfileNav({ user }) {
             </li>
           </ul>
 
-          <button className='profile-nav-btn'> <BiLogOutCircle className='log-out-icon'/> Logout</button>
+          <button className='profile-nav-btn' onClick={handleLogout}> <BiLogOutCircle className='log-out-icon'/> Logout</button>
        </div>
 
      

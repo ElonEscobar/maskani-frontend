@@ -54,7 +54,7 @@ function Pages() {
             <Header isLoggedIn={isLoggedIn}/>
             <Routes>
                 <Route exact path='/auth' element={<Auth setIsLoggedIn={setIsLoggedIn}/>} />
-                <Route exact path='/profile' element={<Profile user={user}/>} />
+                <Route exact path='/profile' element={<Profile user={user} isLoggedIn={isLoggedIn}/>} />
                 <Route exact path='/my-properties' element={<CreateProperty />}/>
                 <Route exact path='/my-classifieds' element={<CreateClassified />}/>
                 <Route exact path='/my-items' element={<CreateItem />}/>
