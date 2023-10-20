@@ -10,7 +10,7 @@ function Home() {
     <>
       {/* Home page img section */}
       <div className="home">
-        <img src="https://i.ibb.co/TtM2ckm/home-background.jpg" alt="home-background" border="0"></img>
+        <img src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="home-background" border="0"></img>
         <div className='home-intro'>
           <div className='title'>WELCOME TO <div>MASKANI KENYA</div></div>
           <div className='detail'>FIND YOUR DREAM HOME WITH US</div>
