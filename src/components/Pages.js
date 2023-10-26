@@ -26,6 +26,7 @@ function Pages() {
   const setCurrentUser = (user) =>{
     setIsLoggedIn(true);
     setUser(user);
+    
   }
 
   useEffect(() => {
@@ -46,7 +47,6 @@ function Pages() {
       console.log('no token available, log in')
     }
   },[]);
-  console.log(user);
 
   return (
     <>

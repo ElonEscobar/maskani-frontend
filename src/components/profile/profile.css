@@ -73,18 +73,18 @@
     margin: 5px;
     margin-bottom: 20px;
 }
-.create-properties h2, .create-classifieds h2, .create-items h2{
+.create-properties h2, .create-classifieds h2, .create-items h2, .user-info-header{
     font-family: 'Roboto Slab', serif;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.create-property>*, .create-classified>*, .create-item>*{
+.create-property>*, .create-classified>*, .create-item>*, .user>*{
     font-family: 'Roboto Slab', serif;
     font-size: 1.2rem;
     margin: 5px;
 }
-.create-new-property-button, .create-new-classified-button, .create-new-item-button{
+.create-new-property-button, .create-new-classified-button, .update-usr-button{
     margin-top: 20px;
     padding: 5px;
     border-radius: 5px;
@@ -93,7 +93,7 @@
     transition: all 0.5s ease;
     
 }
-.create-new-property-button:hover, .create-new-classified-button:hover, .create-new-item-button:hover{
+.create-new-property-button:hover, .create-new-classified-button:hover, .create-new-item-button:hover, .update-usr-button:hover{
     background-color:  #ff1744;
     cursor: pointer;
     color: white;
@@ -103,4 +103,60 @@
 
 .my-properties, .my-classifieds, .my-items{
     margin-top: 5%;
+}
+
+/* profile page styles */
+
+.user-info{
+    margin: 5px;
+}
+
+.usr{
+    display: flex;
+    flex-direction: column;
+}
+.user{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 1rem;
+}
+.update-usr-button{
+    margin-top: 25%;
+    grid-column: 1 / span 2;
+}
+.user input{
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+    padding: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid rgb(74, 96, 122);
+    color: #ff1744;
+}
+
+
+
+
+/* media queries */
+
+@media (width <= 768px) {
+    .create-properties h2, .create-classifieds h2, .create-items h2, .user-info-header{
+        font-size: 1.6rem;
+    }
+    .create-property>*, .create-classified>*, .create-item>*, .user>*{
+        font-size: 1.1rem;
+
+    }
+
+    .update-usr-button{
+        grid-column: 1 / span 1;
+    }
+    .user{
+        grid-template-columns: auto ;
+        gap: 0.5rem;
+    }
+    .user input{
+        width: 100%;
+    }
 }

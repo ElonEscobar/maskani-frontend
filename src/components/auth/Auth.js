@@ -59,14 +59,15 @@ function Auth({ setIsLoggedIn }) {
             if (res.status  > 199 && res.status < 300){
                 let data = await res.json();
                 console.log(data);
+                navigate("/");
+                setIsLoggedIn(true)
+                localStorage.token = data.jwt;
+                localStorage.userId = data.id
             }else {
                 let err = await res.json();
                 setErrors(err);
                 console.log(errors);
-
-            }
-
-            
+            } 
         };
         signup();
         console.log('creating user:');
@@ -94,6 +95,7 @@ function Auth({ setIsLoggedIn }) {
                 let data = await res.json();
                 console.log(data);
                 localStorage.token = data.jwt;
+                localStorage.userId = data.user.id;
                 navigate("/");
                 setIsLoggedIn(true);
 
