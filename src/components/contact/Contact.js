@@ -7,7 +7,7 @@ import {useRef} from 'react'
 function Contact() {
 
   const sendEmail = (e) => {
-    e.prventDefault();
+    e.preventDefault();
     emailjs.sendForm('service_8c1mcvk', 'template_7lo643t', form.current, 'zEgGGsirEpKj4kZql')
     e.target.reset()
   }
