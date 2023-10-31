@@ -30,6 +30,7 @@
     margin-top: 20% ;
 }
 .profile-nav{
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
 }
@@ -37,7 +38,8 @@
     margin-top: 10%;
 }
 .profile-nav li a{
-    font-size: 1.5rem;
+    /* responsive text*/
+    font-size: calc(19px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
     text-decoration: none;
     font-weight: 600;
     font-family: 'poppins';
@@ -46,20 +48,29 @@
 }
 .profile-nav li a:hover{
     color: #ff1744;
-    font-size: 1.6rem;
+    font-size: calc(20px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .profile .profile-nav-btn{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 5px;
     margin-top: 60%;
     transition: all 0.4s ease; 
     border-radius: 5px;
+    top: 0;
+    
+
 }
 .profile .profile-nav-btn:hover{
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     box-shadow: 5px 3px 5px #ff1744;
     cursor: pointer;
+}
+
+.profile-icon, 
+.prop-icon,
+.service-icon{
+    font-size: 2rem;
 }
 /* .log-out-icon{
     font-weight: 800;
@@ -68,23 +79,31 @@
 
 /* END of profile-nav styling */
 
+
+
+
+
+
+
+
+
 /* Create Property */
 .create-properties, .create-classifieds, .create-items{
     margin: 5px;
     margin-bottom: 20px;
 }
-.create-properties h2, .create-classifieds h2, .create-items h2{
+.create-properties h2, .create-classifieds h2, .create-items h2, .user-info-header{
     font-family: 'Roboto Slab', serif;
-    font-size: 2rem;
+    font-size: calc(30px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
     margin-bottom: 20px;
 }
 
-.create-property>*, .create-classified>*, .create-item>*{
+.create-property>*, .create-classified>*, .create-item>*, .user>*{
     font-family: 'Roboto Slab', serif;
     font-size: 1.2rem;
     margin: 5px;
 }
-.create-new-property-button, .create-new-classified-button, .create-new-item-button{
+.create-new-property-button, .create-new-classified-button, .update-usr-button{
     margin-top: 20px;
     padding: 5px;
     border-radius: 5px;
@@ -93,7 +112,7 @@
     transition: all 0.5s ease;
     
 }
-.create-new-property-button:hover, .create-new-classified-button:hover, .create-new-item-button:hover{
+.create-new-property-button:hover, .create-new-classified-button:hover, .create-new-item-button:hover, .update-usr-button:hover{
     background-color:  #ff1744;
     cursor: pointer;
     color: white;
@@ -103,4 +122,106 @@
 
 .my-properties, .my-classifieds, .my-items{
     margin-top: 5%;
+}
+
+/* profile page styles */
+
+.user-info{
+    margin: 5px;
+}
+
+.usr{
+    display: flex;
+    flex-direction: column;
+}
+.user{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 1rem;
+}
+.update-usr-button{
+    margin-top: 25%;
+    grid-column: 1 / span 2;
+}
+.user input{
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+    padding: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid rgb(74, 96, 122);
+    color: #ff1744;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (width <= 920px){
+    .profile-nav{
+        margin-top: 30%;
+    }
+    .profile-icon, 
+    .prop-icon,
+    .service-icon{
+        font-size: 1.8rem;
+    }
+}
+
+@media (width <= 768px) {
+    .profile-icon, 
+    .prop-icon,
+    .service-icon{
+        font-size: 1.6rem;
+    }
+
+    .create-properties h2, .create-classifieds h2, .create-items h2, .user-info-header{
+        font-size: calc(20px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+    }
+    .create-property>*, .create-classified>*, .create-item>*, .user>*{
+        font-size: 1.1rem;
+
+    }
+
+    .update-usr-button{
+        grid-column: 1 / span 1;
+    }
+    .user{
+        grid-template-columns: auto ;
+        gap: 0.5rem;
+    }
+    .user input{
+        width: 100%;
+    }
+    .profile-nav{
+        margin-top: 40%;
+    }
+  
+}
+@media (width <= 550px) {
+    .profile-icon, 
+    .prop-icon,
+    .service-icon{
+        font-size: 2rem;
+        
+    }
+    .profile-nav li span{
+        display: none;
+    }
+    .profile .profile-nav-btn{
+        font-size: 1.1rem;
+    }
+    .profile-nav{
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
 }

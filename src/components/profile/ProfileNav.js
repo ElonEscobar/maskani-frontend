@@ -2,6 +2,8 @@ import React from 'react'
 import './profile.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { BiLogOutCircle } from 'react-icons/bi'
+import { CgProfile } from 'react-icons/cg'
+import { MdOutlineAddHomeWork, MdOutlineWorkOutline } from 'react-icons/md'
 
 function ProfileNav({ user, isLoggedIn }) {
   const navigate = useNavigate()
@@ -17,17 +19,17 @@ function ProfileNav({ user, isLoggedIn }) {
           <img src='https://cdn-icons-png.flaticon.com/512/1246/1246314.png?w=740&t=st=1679683199~exp=1679683799~hmac=a8d4b23324ab7b5193f5171f824ae62906c8b68e9790c152db16323769c6d919' alt='profile-icon'/>
           <ul className='profile-nav'>
             <li>
-              <NavLink to='/profile'>My Profile</NavLink>
+              <NavLink to='/profile'><CgProfile className='profile-icon'/> <span>Profile</span></NavLink>
             </li>
             <li>
-              <NavLink to='/my-properties'>My Properties</NavLink>
+              <NavLink to='/my-properties'><MdOutlineAddHomeWork className='prop-icon'/> <span>Properties</span></NavLink>
             </li>
             <li>
-              <NavLink to='/my-classifieds'>My Services</NavLink>
+              <NavLink to='/my-classifieds'><MdOutlineWorkOutline className='service-icon'/> <span>Services</span></NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to='/my-items'>My Items</NavLink>
-            </li>
+            </li> */}
           </ul>
 
           <button className='profile-nav-btn' onClick={handleLogout}> <BiLogOutCircle className='log-out-icon'/> Logout</button>
