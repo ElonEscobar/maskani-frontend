@@ -224,4 +224,7 @@
         margin-top: 100px;
         margin-bottom: 50px;
     }
+    .create-property>*, .create-classified>*, .create-item>*, .user>*{
+        display: block;
+    }
 }

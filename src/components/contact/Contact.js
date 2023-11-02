@@ -1,5 +1,5 @@
 import React from 'react'
-import './contact.css'
+// import './contact.css'
 import emailjs from '@emailjs/browser';
 import {useRef} from 'react'
 // import IMG1 from '../assets/illustration@2x-85cce263ddf60035c6702cc57dd1fc2a-4d4c8.jpg'
