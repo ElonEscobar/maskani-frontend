@@ -1,13 +1,21 @@
 .footer {
-    background-color: rgb(5, 61, 126);
-    padding: 10px;
-    text-align: center;
+  background-color: rgb(5, 61, 126);
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   }
   
   .footer p {
     text-align: center;
     color: antiquewhite;
   }
+
+  .content {
+    margin-bottom: 50px;  
+}
   .links li{
     list-style: none;
 
@@ -43,4 +51,36 @@
     text-decoration: none;
     color: white;
   }
+
+
+  @media screen and (max-width: 1024px) {
+    .footer {
+        padding: 5px;  
+    }
+    
+    .links a {
+        margin: 0.2rem;  
+        font-size: 1rem;  
+    }
+
+    .socials a {
+        margin-left: 10px;  
+    }
+}
+
+/* Media query for screens up to 600px wide */
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 2px;  
+    }
+    
+    .links a {
+        margin: 0.1rem;  
+        font-size: 0.8rem; 
+    }
+
+    .socials a {
+        margin-left: 5px;  
+    }
+}
 

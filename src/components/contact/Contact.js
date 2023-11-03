@@ -19,16 +19,16 @@ function Contact() {
     
     <div className="contact-container">
       
-      <form ref={form} onSubmit={sendEmail}>
+      <form className='contact-form' ref={form} onSubmit={sendEmail}>
         <h1>Talk to us?</h1>
 
  
-        <input type='text' name='name' placeholder='Your full name' required/>
+        <input className='contact-input' type='text' name='name' placeholder='Your full name' required/>
         
-        <input type='email' name='email' placeholder='Your email address' required/>
+        <input className='contact-input' type='email' name='email' placeholder='Your email address' required/>
          
-        <textarea name='message' rows="10" placeholder='Message...'></textarea>
-        <button className='btn'>Send message</button>
+        <textarea className='contact-textarea' name='message' rows="10" placeholder='Message...' required></textarea>
+        <button className='contact-btn'>Send message</button>
       </form>
     </div>
     <div className='contact-pic'>

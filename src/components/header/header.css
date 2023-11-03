@@ -55,3 +55,30 @@ ul.navlinks{
     }
     
   }
+
+
+  /* Media query for screens up to 1024px wide
+/* @media screen and (max-width: 1024px) {
+    .header {
+        
+        padding: 10px;  
+         font-size: 1.5rem;
+    }
+    
+     
+}
+
+/* Media query for screens up to 600px wide */
+@media screen and (max-width: 600px) {
+    .header {
+        
+        padding: 5px;  
+        font-size: 1.2rem;
+    }
+    body {
+        background-color: lightblue;
+        width: 100%;
+      }
+    
+     
+} */
