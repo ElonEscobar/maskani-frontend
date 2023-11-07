@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ProfileNav from './ProfileNav'
 import './profile.css'
 import { BiCurrentLocation } from 'react-icons/bi'
 import '../property/property.css'
+import { GrEdit } from 'react-icons/gr'
+import { RiDeleteBin5Line } from 'react-icons/ri'
 
 function CreateProperty() {
   
@@ -17,6 +19,34 @@ function CreateProperty() {
   const apiUrl = "http://127.0.0.1:3000/properties"
   const [errors, setErrors] = useState()
   const token = localStorage.token
+  const userId = localStorage.userId
+
+  const [property, setProperty] = useState([]);
+
+  useEffect(()=>{
+    fetch(`http://127.0.0.1:3000/users/${userId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.properties.length > 0 ){
+          setProperty(data.properties)
+        }else{
+          setProperty([])
+        }
+      })
+      .catch((err) => {
+        setErrors(err)
+        console.log(err)
+      })
+    
+  },[])
+  // console.log(property)
+  
   
 
   function handleCreateProperty(e){
@@ -37,7 +67,8 @@ function CreateProperty() {
         Authorization: `Bearer ${token}`
       },
       body: formData
-    }).then(res => res.json()).then((data) => {
+    }).then(res => res.json())
+    .then((data) => {
       console.log('success');
       console.log(data);
 
@@ -80,7 +111,7 @@ function CreateProperty() {
               <br/>
 
               <label htmlFor='property-type'className='property-type-label'>Type of property</label>
-              <select  className='property-type' id='property-type' onChange={e => setPType(e.target.value)}>
+              <select required className='property-type' id='property-type' onChange={e => setPType(e.target.value)}>
                 <option>For Sale</option>
                 <option>For Rent</option>
               </select>
@@ -97,25 +128,47 @@ function CreateProperty() {
           {/*  */}
           <div className='my-properties'>
             <h2>Created Properties</h2>
+            {
+              property.length > 0 ? 
+                property.map((prop) => {
+                  console.log(prop);
+                  return(
+                    <div className='main-card' key={prop.id}>
+                    <div className='card-img'>
+                      <img alt='home-img' src={prop.image_data} className='home-img' loading='lazy'/>
+                      <div className='prop-actions'>
+                        <div className='home-type'>{prop.home_type}</div>
+                      
+                        <div className='crud-btns'>
+                          <div className='edit-pro-btn'>
+                            <GrEdit/>
+                          </div>
+                          <div className='delete-pro-btn'>
+                            <RiDeleteBin5Line/>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='m-button'>
+                        <button>More details</button>
+                      </div>
+                    </div>
+                    <div className='details'>
+                      <div className='home-details'>
+                        <span className='home-name'>{prop.name}</span>
+                        <span className='location'><BiCurrentLocation />{prop.location}</span>
+                      </div>
+                      <div className='price'>Ksh {prop.price}</div>
+                    </div>
+                  </div> 
+                  )
+                            
+                 })
+              :
+              <h2>No Properties Owned</h2>             
+            }
+            
 
-            <div className='main-card'>
-              <div className='card-img'>
-                <img alt='home-img' src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' className='home-img'/>
-                <div className='type'>
-                  <span>For Sale</span>
-                </div>
-                <div className='m-button'>
-                  <button>More details</button>
-                </div>
-              </div>
-              <div className='details'>
-                <div className='home-details'>
-                  <span className='home-name'>Flat Name</span>
-                  <span className='location'><BiCurrentLocation />location</span>
-                </div>
-                <div className='price'>Ksh 8999</div>
-              </div>
-          </div>
+            
           </div>
         </div>
     </div>
