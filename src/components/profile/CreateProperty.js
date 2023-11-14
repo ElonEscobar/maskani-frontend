@@ -5,6 +5,7 @@ import { BiCurrentLocation } from 'react-icons/bi'
 import '../property/property.css'
 import { GrEdit } from 'react-icons/gr'
 import { RiDeleteBin5Line } from 'react-icons/ri'
+import { animateScroll as scroll } from 'react-scroll'
 
 function CreateProperty() {
   
@@ -18,10 +19,22 @@ function CreateProperty() {
 
   const apiUrl = "http://127.0.0.1:3000/properties"
   const [errors, setErrors] = useState()
+  const [isUpdating, setIsUpdating] = useState(false)
   const token = localStorage.token
   const userId = localStorage.userId
 
   const [property, setProperty] = useState([]);
+
+  const resetFields = ()=>{
+    setImage(null)
+    setName('')
+    setLocation('')
+    setAmenities('')
+    setPType('')
+    setPrice('')
+    setDescription('')
+  }
+
 
   useEffect(()=>{
     fetch(`http://127.0.0.1:3000/users/${userId}`, {
@@ -48,6 +61,7 @@ function CreateProperty() {
   // console.log(property)
   
   
+  //make POST request to create new property
 
   function handleCreateProperty(e){
     e.preventDefault();
@@ -57,9 +71,12 @@ function CreateProperty() {
     formData.append('location', location)
     formData.append('description', description)
     formData.append('amenities', amenities)
-    formData.append('property_type', pType)
+    formData.append('home_type', pType)
     formData.append('price', price)
     formData.append('image', image)
+
+    resetFields()
+    
 
     fetch(apiUrl, {
       method: 'POST',
@@ -69,8 +86,9 @@ function CreateProperty() {
       body: formData
     }).then(res => res.json())
     .then((data) => {
-      console.log('success');
       console.log(data);
+      console.log('done')
+      window.location.reload();
 
     }).catch((err) => {
       setErrors(err)
@@ -83,6 +101,92 @@ function CreateProperty() {
     setImage(e.target.files[0])
   }
 
+
+  // delete property
+
+  const handleDelete = async (id) => {
+
+    try {
+      const res = await fetch(`${apiUrl}/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        }
+        
+      })
+      if(res.ok){
+        alert(`Property deleted successfully`)
+        window.location.reload()
+      }else{
+        console.log('Failed to delete')
+      }
+    } catch (error) {
+      console.error('Error :',error)
+    }
+      
+  }
+
+  // find property to be edited
+  const handleEdit = (id)=>{
+    localStorage.propId = id;
+    let propId = id
+    setIsUpdating(true)
+    const propToEdit = property.find(prop => prop.id === propId)
+
+    setName(propToEdit.name)
+    setPType(propToEdit.home_type)
+    setAmenities(propToEdit.amenities)
+    setLocation(propToEdit.location)
+    setPrice(propToEdit.price)
+    setDescription(propToEdit.description)
+    setImage(propToEdit.image_data)
+    
+    scroll.scrollToTop({
+      duration: 1000,
+      smooth: 'easeInOutQuart'
+    })
+
+  }
+
+
+  // edit property
+  const handlePropUpdate = async()=>{
+    let id = localStorage.propId
+    console.log('Editing id: ', id)
+
+    const formData = new FormData();
+    formData.append('name', name)
+    formData.append('location', location)
+    formData.append('description', description)
+    formData.append('amenities', amenities)
+    formData.append('home_type', pType)
+    formData.append('price', price)
+    formData.append('image', image)
+
+
+    try {
+      const req = await fetch(`${apiUrl}/${id}`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${token}`
+        },
+        body: formData
+      })
+      if (req.ok){
+        console.log('edited done')
+        let edited = await req.json()
+        console.log(edited)
+        window.location.reload()
+      }else{
+        console.log('something went wrong')
+      }
+      
+    } catch (error) {
+      console.error('Error :',error)
+    }
+  }
+
   return (
     <div className="create-property-container">
         <ProfileNav/>
@@ -90,7 +194,7 @@ function CreateProperty() {
           <h2>Start advertising your properties here</h2>
 
           <div className='create-property-form'>
-            <form className='create-property' onSubmit={handleCreateProperty}>
+            <form className='create-property' >
               <label htmlFor='property-img' className='property-img-label'>Property Image</label>
               <input required type='file' accept='image/*' id='property-img' className='property-img'  onChange={handleImage}/>
               <br/>
@@ -111,9 +215,11 @@ function CreateProperty() {
               <br/>
 
               <label htmlFor='property-type'className='property-type-label'>Type of property</label>
-              <select required className='property-type' id='property-type' onChange={e => setPType(e.target.value)}>
-                <option>For Sale</option>
-                <option>For Rent</option>
+              <select value={pType} className='property-type' id='property-type' onChange={e => setPType(e.target.value)}>
+                <option value='Not set'>select</option>
+
+                <option value='For Sale'>For Sale</option>
+                <option value='For Rent'>For Rent</option>
               </select>
               <br/>
 
@@ -121,44 +227,44 @@ function CreateProperty() {
               <input required type='number' id='property-price' className='property-price' value={price} onChange={e => setPrice(e.target.value)}/>
               <br/>
 
-              <button type='submit' className='create-new-property-button'>create property</button>
             </form>
+              {
+                isUpdating ? 
+                <button onClick={(e)=>handlePropUpdate(e)} className='create-new-property-button'>Update property</button>
+                :
+                <button type='submit' onClick={(e)=> handleCreateProperty(e)} className='create-new-property-button'>Create property</button>
+              }
 
           </div>
           {/*  */}
+          <h2>Created Properties</h2>
           <div className='my-properties'>
-            <h2>Created Properties</h2>
             {
               property.length > 0 ? 
                 property.map((prop) => {
-                  console.log(prop);
                   return(
                     <div className='main-card' key={prop.id}>
-                    <div className='card-img'>
-                      <img alt='home-img' src={prop.image_data} className='home-img' loading='lazy'/>
-                      <div className='prop-actions'>
-                        <div className='home-type'>{prop.home_type}</div>
-                      
-                        <div className='crud-btns'>
-                          <div className='edit-pro-btn'>
-                            <GrEdit/>
-                          </div>
-                          <div className='delete-pro-btn'>
-                            <RiDeleteBin5Line/>
+                      <div className='card-img'>
+                        <img alt='home-img' src={prop.image_data} className='home-img' loading='lazy'/>
+                        <div className='prop-actions'>
+                          <div className='home-type'>{prop.home_type}</div>
+                        
+                          <div className='crud-btns'>
+                              <GrEdit role='button' className='edit-pro-btn' onClick={() => handleEdit(prop.id)}/>
+                              <RiDeleteBin5Line role='button' className='delete-pro-btn' onClick={()=> handleDelete(prop.id)}/>
                           </div>
                         </div>
+                        <div className='m-button'>
+                          <button>More details</button>
+                        </div>
                       </div>
-                      <div className='m-button'>
-                        <button>More details</button>
+                      <div className='details'>
+                        <div className='home-details'>
+                          <span className='home-name'>{prop.name}</span>
+                          <span className='location'><BiCurrentLocation />{prop.location}</span>
+                        </div>
+                        <div className='price'>Ksh {prop.price}</div>
                       </div>
-                    </div>
-                    <div className='details'>
-                      <div className='home-details'>
-                        <span className='home-name'>{prop.name}</span>
-                        <span className='location'><BiCurrentLocation />{prop.location}</span>
-                      </div>
-                      <div className='price'>Ksh {prop.price}</div>
-                    </div>
                   </div> 
                   )
                             
