@@ -122,9 +122,9 @@
 
 
 .my-properties, .my-classifieds, .my-items{
-    margin-top: 5%;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .home-details span{
@@ -252,6 +252,7 @@
     .profile-nav{
         margin-top: 40%;
     }
+
   
 }
 @media (width <= 550px) {
@@ -274,7 +275,5 @@
     .create-property>*, .create-classified>*, .create-item>*, .user>*{
         display: block;
     }
-    .my-properties, .my-classifieds, .my-items{
-        grid-template-columns: auto;
-    }
+    
 }

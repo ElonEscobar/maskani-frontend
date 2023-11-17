@@ -254,9 +254,7 @@ function CreateProperty() {
                               <RiDeleteBin5Line role='button' className='delete-pro-btn' onClick={()=> handleDelete(prop.id)}/>
                           </div>
                         </div>
-                        <div className='m-button'>
-                          <button>More details</button>
-                        </div>
+                        
                       </div>
                       <div className='details'>
                         <div className='home-details'>
