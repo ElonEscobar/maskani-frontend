@@ -175,11 +175,11 @@ function CreateProperty() {
       })
       if (req.ok){
         console.log('edited done')
-        let edited = await req.json()
-        console.log(edited)
         window.location.reload()
       }else{
         console.log('something went wrong')
+        let edited = await req.json()
+        console.log(edited)
       }
       
     } catch (error) {
@@ -254,9 +254,7 @@ function CreateProperty() {
                               <RiDeleteBin5Line role='button' className='delete-pro-btn' onClick={()=> handleDelete(prop.id)}/>
                           </div>
                         </div>
-                        <div className='m-button'>
-                          <button>More details</button>
-                        </div>
+                        
                       </div>
                       <div className='details'>
                         <div className='home-details'>

@@ -91,6 +91,7 @@
 .create-properties, .create-classifieds, .create-items{
     margin: 5px;
     margin-bottom: 20px;
+    width: 80%;
 }
 .create-properties h2, .create-classifieds h2, .create-items h2, .user-info-header{
     font-family: 'Roboto Slab', serif;
@@ -122,9 +123,9 @@
 
 
 .my-properties, .my-classifieds, .my-items{
-    margin-top: 5%;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .home-details span{
@@ -175,6 +176,7 @@
     font-size: 1.7em;
     cursor: pointer;
     filter: invert(1);
+    color: red;
 }
 .delete-pro-btn{
     color: red;
@@ -193,6 +195,13 @@
 .crud-btns{
     margin: 5px 3px 0 0;
     
+}
+
+.serv-crud-btns{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
 }
 .home-type{
     margin: 5px;
@@ -252,6 +261,7 @@
     .profile-nav{
         margin-top: 40%;
     }
+
   
 }
 @media (width <= 550px) {
@@ -275,6 +285,7 @@
         display: block;
     }
     .my-properties, .my-classifieds, .my-items{
-        grid-template-columns: auto;
+        justify-content: center;
     }
+    
 }
