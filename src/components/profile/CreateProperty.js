@@ -175,11 +175,11 @@ function CreateProperty() {
       })
       if (req.ok){
         console.log('edited done')
-        let edited = await req.json()
-        console.log(edited)
         window.location.reload()
       }else{
         console.log('something went wrong')
+        let edited = await req.json()
+        console.log(edited)
       }
       
     } catch (error) {

@@ -91,6 +91,7 @@
 .create-properties, .create-classifieds, .create-items{
     margin: 5px;
     margin-bottom: 20px;
+    width: 80%;
 }
 .create-properties h2, .create-classifieds h2, .create-items h2, .user-info-header{
     font-family: 'Roboto Slab', serif;
@@ -175,6 +176,7 @@
     font-size: 1.7em;
     cursor: pointer;
     filter: invert(1);
+    color: red;
 }
 .delete-pro-btn{
     color: red;
@@ -193,6 +195,13 @@
 .crud-btns{
     margin: 5px 3px 0 0;
     
+}
+
+.serv-crud-btns{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
 }
 .home-type{
     margin: 5px;
@@ -274,6 +283,9 @@
     }
     .create-property>*, .create-classified>*, .create-item>*, .user>*{
         display: block;
+    }
+    .my-properties, .my-classifieds, .my-items{
+        justify-content: center;
     }
     
 }
