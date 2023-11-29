@@ -1,0 +1,154 @@
+:root{
+    --clr-1: #ff1744;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+.about_header{
+    width: auto;
+    overflow: hidden;
+    max-height: 100px;
+    position: relative;
+}
+.about_header img{
+    height: auto;
+    width: 100%;
+}
+.about_header h3{
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: var(--clr-1);
+    
+}
+.about_intro p{
+    font-size: 1.2rem;
+    font-family: 'poppins';
+    margin: 1rem;
+}
+.about_intro p span{
+    color: var(--clr-1);
+    font-weight: 600;
+
+
+}
+.about_us{
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    margin: 1rem;
+}
+
+.about_us img{
+    width: 50%;
+    /* max-height: 300px; */
+    margin-right: 5px;
+}
+.why_us{
+    width: 50%;
+}
+.why_us h4{
+    font-size: 0.8rem;
+    color:  var(--clr-1);
+}
+.why_us h3{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.why_us p{
+    font-size: 1.1rem;
+    font-family: 'poppins';
+    margin-bottom: 0.5rem;
+}
+.why_us a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    color: var(--clr-1);
+
+}
+.why_us a:hover{
+    padding: 5px;
+    transition: all .3s ease-in;
+    border: 2px solid var(--clr-1);
+}
+.about_services{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.ser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 40%;
+    height: 150px;
+    border-radius: 1.5rem;
+    padding: 5px;
+    margin: 1rem;
+    box-shadow: 3px 2px 4px grey;
+    
+}
+.ser:hover{
+    box-shadow: 3px 2px 5px var(--clr-1);
+}
+.ser-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.ser h3{
+    font-size: 1.2rem;
+    color: var(--clr-1);
+}
+.ser p{
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+/* responsiveness */
+
+
+@media (width < 550px) {
+    .about_intro p{
+        font-size: 1rem;
+        margin: 5px;
+    }
+    .about_header h3{
+        font-size: 1.3rem;
+        top: 1.5rem;
+        left: 8px;
+
+    }
+    .ser{
+        margin: 0.5rem;
+        width: 90%;
+    }
+    .about_us{
+        flex-direction: column;
+    }
+    .about_us img{
+        width: 100%;
+    }
+    .why_us{
+        width: 100%;
+    }
+    .about_services{
+        flex-direction: column;
+    }
+
+}
+@media (width < 768px) {
+    .about_intro p {
+        font-size: 1.1rem;
+    }
+}
