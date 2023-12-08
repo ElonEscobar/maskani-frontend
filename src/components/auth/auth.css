@@ -7,7 +7,7 @@
     margin-bottom: 5%;
 }
 .login, .signup{
-    margin-top: 2%;
+    margin: 2%;
 
 }
 
@@ -18,7 +18,6 @@
 .log-inputs input{
     margin: 10px 0;
     height: 5vh;
-    font-size: 1.2rem;
     border-radius: 5px;
 }
 .log-inputs input:hover {
@@ -61,4 +60,7 @@
 .category-select{
     font-size: 1.3rem;
     padding: 5px;
+}
+.sign-buttons{
+    display: flex;
 }

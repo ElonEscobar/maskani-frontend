@@ -116,11 +116,11 @@
     transform: skewX(40deg);
 
 }
-div.ad p{
+.ad p{
     font-size: 1.3rem;
 }
-div.ad h3{
-    font-size: 2rem;
+.ad h3{
+    font-size: 1.8rem;
 }
 
 .middle .sign-ad{
@@ -209,5 +209,61 @@ div.ad h3{
     100%{
         color: #ff1744;
         font-size: 3rem;
+    }
+}
+
+
+/* responsiveness */
+@media(width<=768px){
+    .ad p{
+        font-size: 1.3rem;
+    }
+    .ad h3{
+        font-size: 1.6rem;
+    }
+}
+
+@media(width<=650px){
+    .sign-ad h2{
+        margin-left: 2%;
+        font-size: 1.5rem;
+    }
+    .middle .ad{
+        width: 25%;
+    }
+}
+
+@media(width<=550px){
+    .sign-ad h2{
+        font-size: 1.1rem;
+    }
+    .middle{
+        height: 120px;
+    }
+    .ad p{
+        font-size: 1.1rem;
+    }
+    .ad h3{
+        font-size: 1.3rem;
+    }
+    .middle .ad{
+        width: 30%;
+    }
+    .sign-ad button{
+        font-size: 1.2rem;   
+        font-weight: bold;     
+    }
+
+}
+@media(width<=450px){
+    .ad p span{
+        display: none;
+    }
+    .ad h3{
+        font-size: 1.2rem;
+    }
+    .sign-ad button{
+        margin-top: 0;
+        width: 150px;
     }
 }

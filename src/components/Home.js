@@ -35,7 +35,7 @@ function Home() {
       {/* ad header */}
       <div className='middle'>
         <div className='ad'>
-          <p>Find your</p>
+          <p>Find <span>your</span></p>
           <h3>Customers here</h3>
         </div>
         <div className='sign-ad'>
