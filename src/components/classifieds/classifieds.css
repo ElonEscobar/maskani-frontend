@@ -18,10 +18,10 @@
     height: 350px;
     margin: 20px;
     border-radius: 15px;
-    box-shadow: 3px 5px 10px rgb(5, 61, 126);
+    box-shadow: 3px 5px 10px var(--clr-2);
 }
 .classified-main-card:hover{
-    box-shadow: 5px 8px 5px rgb(5, 61, 126);
+    box-shadow: 5px 8px 5px var(--clr-2);
 
 }
 
@@ -53,7 +53,7 @@
 
 }
 .name:hover{
-    color: rgb(5, 61, 126);
+    color: var(--clr-2);
 }
 .desc{
     font-size: 1.1rem;

@@ -3,11 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* profile page layout */
 
@@ -43,11 +39,11 @@
     text-decoration: none;
     font-weight: 600;
     font-family: 'poppins';
-    color: rgb(5, 61, 126);
+    color: var(--clr-2);
     transition: all 0.5s ease;
 }
 .profile-nav li a:hover{
-    color: #ff1744;
+    color: var(--clr-1);
     font-size: calc(20px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 
@@ -63,7 +59,7 @@
 }
 .profile .profile-nav-btn:hover{
     font-size: 1.1rem;
-    box-shadow: 5px 3px 5px #ff1744;
+    box-shadow: 5px 3px 5px var(--clr-1);
     cursor: pointer;
 }
 
@@ -97,7 +93,7 @@
     font-family: 'Roboto Slab', serif;
     font-size: calc(30px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
     margin: 1rem 0;
-    color: #ff1744;
+    color: var(--clr-1);
 }
 
 .create-property>*, .create-classified>*, .create-item>*, .user>*{
@@ -115,7 +111,7 @@
     
 }
 .create-new-property-button:hover, .create-new-classified-button:hover, .create-new-item-button:hover, .update-usr-button:hover{
-    background-color:  #ff1744;
+    background-color:  var(--clr-1);
     cursor: pointer;
     color: white;
     box-shadow: 3px 3px 5px rgb(0, 204, 255);
@@ -168,7 +164,7 @@
     border-left: 0;
     border-right: 0;
     border-bottom: 2px solid rgb(74, 96, 122);
-    color: #ff1744;
+    color: var(--clr-1);
 }
 
 
@@ -176,7 +172,6 @@
     font-size: 1.7em;
     cursor: pointer;
     filter: invert(1);
-    color: red;
 }
 .delete-pro-btn{
     color: red;

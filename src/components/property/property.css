@@ -11,7 +11,7 @@
     border-radius: 20px;
     height: 350px;
     margin: 15px;
-    box-shadow: 3px 4px 10px rgb(5, 61, 126) inset;
+    box-shadow: 3px 4px 10px var(--clr-2) inset;
 }
 .main-card:hover{
     box-shadow: 2px 4px 10px rgb(0, 204, 255)  ;
@@ -52,7 +52,7 @@
     font-size: 1.5rem;
 }
 .location{
-    color: rgb(5, 61, 126);
+    color: var(--clr-2);
 }
 .home-name{
     cursor: pointer;
@@ -76,7 +76,7 @@
       font-size: 1.1rem;
     }
     .m-button button:hover{
-        color: rgb(5, 61, 126);
+        color: var(--clr-2);
         text-decoration: none;
 
     }

@@ -21,7 +21,7 @@
     border-radius: 5px;
 }
 .log-inputs input:hover {
-    border: 3px solid #ff1744;
+    border: 3px solid var(--clr-1);
 
 }
 .login p, .signup p{
@@ -30,14 +30,14 @@
 }
 .login h2, .signup h2{
     font-size: 1.5rem;
-    color: #ff1744;
+    color: var(--clr-1);
     margin-bottom: 3%;
 }
 .names .first-name{
     margin-right: 20px;
 }
 .log-inputs button{
-    background-color: rgb(5, 61, 126);
+    background-color: var(--clr-2);
     color: #fff;
     padding: 10px;
     width: 40%;
@@ -49,7 +49,7 @@
 }
 
 .log-inputs button:hover{
-    background-color: #ff1744;
+    background-color: var(--clr-1);
 
     cursor: pointer;
     box-shadow: 3px 5px 5px #411f26;

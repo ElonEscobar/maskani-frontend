@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
 
 .home{
     height: 100vh;
@@ -21,54 +21,148 @@
     position: relative;
     text-align: center;
     align-items: center;
-    top: 45%;
     color: #fff;
     animation: slideFromBottom 1.6s ease-in-out;
 
 }
 
 .home-intro .title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 500;
+    margin-top: 1rem;
 }
 
 .title div{
-    color: #ff1744;
+    color: var(--clr-1);
     display: inline-block;
     font-weight: 600;
 }
 
 .home-intro .detail {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 400;
     margin-top: 10px;
-    font-family: 'poppins';
+    font-family: 'Dhurjati', sans-serif;
+    background: linear-gradient(to right, rgba(244, 10, 80, 0.4), rgba(27, 45, 244, 0.4));
+    width: 100%;
 }
 
-.home-intro p{
-    font-size: 1.2rem;    
+.home-intro-p p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-family: 'Dhurjati', sans-serif;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 3px 5px 4px var(--clr-2);
+    margin: 1rem;
+}
+.home-intro-p p span{
+    color: var(--clr-1);
+}
+.home-intro-p p::before{
+    content: '"';
+    font-size: 2rem;
+    color: var(--clr-1);
+}
+.home-intro-p p::after{
+    content: '"';
+    font-size: 2rem;
+    color: var(--clr-1);
 }
 
-.home-intro button{
-    color: black;
-    border: 3px solid #fff;
-    width: 10%;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 20px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    background: transparent;
-    transition: all 0.4s ease;
-}
 
-.home-intro button:hover{
+/* learn more btn */
+button.learn-more {
+    position: relative;
+    display: inline-block;
     cursor: pointer;
-    background-color: #ff1744;
-    box-shadow: 3px 5px 5px #ff1744;
-    border: none;
-    color: white;
-}
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: 35%;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--clr-1);
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: var(--clr-1);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button.learn-more:hover .circle {
+    width: 100%;
+   }
+   
+   button.learn-more:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button.learn-more:hover .button-text {
+    color: #fff;
+   }
+
+/*  */
 
 .cl-header, .r-header{
     text-align: center;
@@ -86,20 +180,18 @@
 .r-header h3{
     font-size: 1.2rem;
 }
-.home-icon{
-    animation: animateIcons 3s ease-in-out 1s infinite;
-}
+
 
 
 /* Middle header sign up ad */
 .middle{
     overflow: hidden;
     width: 100%;
-    border: 1px solid #ff1744;
+    border: 1px solid var(--clr-1);
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    background: #ff1744;
+    background: var(--clr-1);
     
     
 }
@@ -110,7 +202,7 @@
     font-size: 2rem;
     width: 20%;
     color: #fff;
-    background: #ff1744;
+    background: var(--clr-1);
 }
 .middle .ad >*{
     transform: skewX(40deg);
@@ -140,31 +232,31 @@
     background: transparent;
     border-radius: 5px;
     transform: skewX(40deg);
-    border: 2px solid rgb(5, 61, 126);
+    border: 2px solid var(--clr-2);
     margin-top: 3%;
     transition: all .7s;
-    box-shadow: 3px 2px rgb(5, 61, 126);
+    box-shadow: 3px 2px var(--clr-2);
 }
 .sign-ad button a{
     text-decoration: none;
-    color: #ff1744;
+    color: var(--clr-1);
 }
 
 .middle .sign-ad >*{
     transform: skewX(40deg);
 }
 .sign-ad span{
-    color: rgb(5, 61, 126);
+    color: var(--clr-2);
 }
 .sign-ad button:hover{
-    box-shadow: 5px 10px 8px #ff1744;
+    box-shadow: 5px 10px 8px var(--clr-1);
     cursor: pointer;
     font-size: 1.4rem;
     border: none;    
 }
 .sign-ad h2{
     margin-left: 4%;
-    color: #ff1744;
+    color: var(--clr-1);
     word-wrap: break-word;
 }
 .sign-ad h2 a{
@@ -191,35 +283,23 @@
     }
 }
 
-@keyframes animateIcons {
-    0%{
-        color: rgb(5, 61, 126);
-        font-size: 3rem;
-    }
-    20%{
-        color: rgb(22, 27, 110);
-    }
-    50%{
-        color: rgb(31, 5, 126);
-        font-size:2rem;
-    }
-    80%{
-        color: rgb(126, 5, 90);
-    }
-    100%{
-        color: #ff1744;
-        font-size: 3rem;
-    }
-}
 
 
 /* responsiveness */
+@media(width<=920px){
+    button.learn-more{
+        margin-top: 50%;
+    }
+}
 @media(width<=768px){
     .ad p{
         font-size: 1.3rem;
     }
     .ad h3{
         font-size: 1.6rem;
+    }
+    button.learn-more{
+        margin-top: 50%;
     }
 }
 
@@ -230,6 +310,21 @@
     }
     .middle .ad{
         width: 25%;
+    }
+    .home-intro .title{
+        font-size: 1.4rem;
+    }
+    .home img{
+        height: auto;
+    }
+    .home{
+        height: auto;
+    }
+    button.learn-more{
+        margin-top: 45%;
+    }
+    .home-intro .detail{
+        font-size: 2rem;
     }
 }
 
@@ -254,6 +349,7 @@
         font-weight: bold;     
     }
 
+
 }
 @media(width<=450px){
     .ad p span{
@@ -265,5 +361,10 @@
     .sign-ad button{
         margin-top: 0;
         width: 150px;
+    }
+}
+@media(width<=390px){
+    button.learn-more{
+        margin-top: 25%;
     }
 }
