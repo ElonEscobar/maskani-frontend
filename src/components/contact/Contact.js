@@ -48,7 +48,29 @@ function contact(){
             </div>
         </div>
 
-        <form>
+        <form className="form">
+          <div className="col-2">
+
+            <div className="form-group">
+              <label>first name</label>
+              <input className="input" type="text"/>
+            </div>
+
+             <div className="form-group">
+              <label>last name</label>
+              <input className="input" type="text"/>
+            </div>
+
+            <div className="form-group">
+              <label>Email</label>
+              <input className="input" type="email"/>
+            </div>
+
+ 
+
+           
+
+          </div>
 
         </form>
       </div>
