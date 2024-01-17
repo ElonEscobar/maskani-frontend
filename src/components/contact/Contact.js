@@ -65,12 +65,24 @@ function contact(){
               <label>Email</label>
               <input className="input" type="email"/>
             </div>
-
- 
-
-           
-
           </div>
+
+
+           <div className="col-2">
+           <div className="form-group solo">
+              <label>message</label>
+              <textarea></textarea>
+            </div>
+
+           </div>
+
+
+          <div className="col-2">
+           <div className="form-group right">
+           <button className="primary">send message</button>
+           </div>
+          </div>
+
 
         </form>
       </div>

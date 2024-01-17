@@ -124,6 +124,14 @@ span{
     flex-direction: column;
     flex: 0 1 100%;
     padding-right: 30px;  
+
+  
+
+    &.right{
+      align-items: flex-end;
+    }
+    
+
   }
 
 }
@@ -135,13 +143,13 @@ label{
 
   
   }
-  /* &:nth-child(2){
+  &:nth-child(2){
     padding-right: 0;
 
     
-  } */
+  }
 
-  input[type="text"], input[type="text"], input[type="email"]{
+  input[type="text"], input[type="text"], input[type="email"], textarea{
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -152,7 +160,11 @@ label{
     background: transparent;
     transition: all .3s ease-in-out;
     margin-bottom: 1rem;
-    width: 50%;
+    width: 70%;
+
+   
+
+    
 
     &:focus{
       
@@ -160,6 +172,24 @@ label{
       border: none;
       border-bottom:  2px solid #05f7ff;
     }
+
+    &.textarea{
+      width: 100%;
+    }
+
+ 
+  }
+
+ 
+  button{
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    background: white;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    
 
   }
 
