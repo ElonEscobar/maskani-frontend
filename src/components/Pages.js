@@ -59,8 +59,6 @@ function Pages() {
                 <Route exact path='/my-classifieds' element={<CreateClassified />}/>
                 <Route exact path='/my-items' element={<CreateItem />}/>
 
-                
-
                 <Route exact path='/about' element={<About/>} />
                 <Route exact path='/properties' element={<Property/>} />
                 <Route exact path='/contact' element={<Contact/>} />
@@ -68,7 +66,7 @@ function Pages() {
                 <Route exact path='/' element={<Home />} />
 
             </Routes>
-            <Footer /> 
+            <Footer />  q
         </Router>
     </>
   )
