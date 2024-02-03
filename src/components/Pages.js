@@ -66,7 +66,7 @@ function Pages() {
                 <Route exact path='/' element={<Home />} />
 
             </Routes>
-            <Footer />  q
+            <Footer /> 
         </Router>
     </>
   )
