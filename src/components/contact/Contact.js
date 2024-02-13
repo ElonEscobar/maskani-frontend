@@ -56,10 +56,7 @@ function contact(){
               <input className="input" type="text"/>
             </div>
 
-             <div className="form-group">
-              <label>last name</label>
-              <input className="input" type="text"/>
-            </div>
+            
 
             <div className="form-group">
               <label>Email</label>

@@ -49,8 +49,8 @@ p.sub-title{
 }
 
 h4{
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-size: 1.85rem;
+   font-weight: 800;
   margin: 0;
 
   
@@ -85,12 +85,14 @@ span{
   display: flex;
   width: 40%;
   justify-content: space-between;
+  position: relative;
+  bottom: -80px;
   .icon-circle{
-    flex: 0 0 40px;
+    flex: 0 0 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35px;
+    height: 50px;
     border-radius: 50%;
     color: white;
     transition: all .3s ease-in-out;
@@ -98,7 +100,7 @@ span{
       background-color: #05f7ff ;
     }
     .fa{
-      font-size: 20px;
+      font-size: 30px;
   
     }
     
@@ -189,7 +191,10 @@ label{
     border: none;
     text-transform: uppercase;
     border-radius: 10px;
-    
+    position: relative;
+    top: 40px;
+    left: -200px;
+  
 
   }
 
