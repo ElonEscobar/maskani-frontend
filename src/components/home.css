@@ -21,6 +21,7 @@
     position: relative;
     text-align: center;
     align-items: center;
+    padding-top: 4rem;
     color: #fff;
     animation: slideFromBottom 1.6s ease-in-out;
 
@@ -42,9 +43,12 @@
     font-size: 2.5rem;
     font-weight: 400;
     margin-top: 10px;
-    font-family: 'Dhurjati', sans-serif;
-    background: linear-gradient(to right, rgba(244, 10, 80, 0.4), rgba(27, 45, 244, 0.4));
+    font-family: 'poppins';
+    font-weight: 500;
+    background: linear-gradient(to right, #ff1744, rgb(3, 53, 252));
     width: 100%;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .home-intro-p p{
@@ -299,7 +303,7 @@ button.learn-more {
         font-size: 1.6rem;
     }
     button.learn-more{
-        margin-top: 50%;
+        margin-top: 40%;
     }
 }
 
@@ -321,10 +325,11 @@ button.learn-more {
         height: auto;
     }
     button.learn-more{
-        margin-top: 45%;
+        margin-top: 1rem;
     }
     .home-intro .detail{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-top: 14rem;
     }
 }
 
@@ -362,9 +367,8 @@ button.learn-more {
         margin-top: 0;
         width: 150px;
     }
-}
-@media(width<=390px){
-    button.learn-more{
-        margin-top: 25%;
+    .home-intro .detail{
+        font-size: 1.5rem;
+        margin-top: 10rem;
     }
 }

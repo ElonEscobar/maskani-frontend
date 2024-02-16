@@ -1,6 +1,5 @@
 import React from 'react'
 import './home.css'
-import { IoHomeSharp } from 'react-icons/io5'
 import Property from './property/Property'
 import Classifieds from './classifieds/Classifieds'
 import { Link } from 'react-router-dom'
