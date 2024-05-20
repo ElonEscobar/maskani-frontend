@@ -108,7 +108,8 @@ span{
 
   
 }
-
+/* the styles below affect the overall 'h1's and 'h3's */
+ 
 
 .form{
   padding: 40px;
@@ -133,9 +134,7 @@ span{
       align-items: flex-end;
     }
     
-
-  }
-
+ 
 }
 label{
   font-size: .9rem;
@@ -197,10 +196,4 @@ label{
   
 
   }
-
-
-
-
-
-
-
+ 

@@ -2,6 +2,10 @@ import React from 'react'
 import './classifieds.css'
 
 function Classifieds() {
+  // fetch classifieds and display them here
+
+
+  
   return (
     <div className='classifieds'>
       <div className='classified-main-card'>

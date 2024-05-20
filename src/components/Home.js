@@ -1,6 +1,5 @@
 import React from 'react'
 import './home.css'
-import { IoHomeSharp } from 'react-icons/io5'
 import Property from './property/Property'
 import Classifieds from './classifieds/Classifieds'
 import { Link } from 'react-router-dom'
@@ -12,14 +11,20 @@ function Home() {
       <div className="home">
         <img src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="home-background" border="0"></img>
         <div className='home-intro'>
-          <div className='title'>WELCOME TO <div>MASKANI KENYA</div></div>
+          <div className='title'>WELCOME TO <div>MASKAN KENYA</div></div>
           <div className='detail'>FIND YOUR DREAM HOME WITH US</div>
-          <p>Maskani Kenya is the trusted resource for home buyers, sellers, and dreamers offering the most comprehensive source of for-sale or rent properties</p>
           
-          <button>Read More</button>
-          <IoHomeSharp className='home-icon'/>
+          <button className="learn-more">
+            <span className="circle" aria-hidden="true">
+            <span className="icon arrow"></span>
+            </span>
+            <span className="button-text">Learn More</span>
+          </button>
 
         </div>
+      </div>
+      <div className='home-intro-p'>
+        <p><span>Maskan Kenya</span> is the trusted resource for home buyers, sellers, and dreamers offering the most comprehensive source of for-sale or rent properties</p>
       </div>
 
       {/* Recents properties section */}
@@ -35,7 +40,7 @@ function Home() {
       {/* ad header */}
       <div className='middle'>
         <div className='ad'>
-          <p>Find your</p>
+          <p>Find <span>your</span></p>
           <h3>Customers here</h3>
         </div>
         <div className='sign-ad'>
