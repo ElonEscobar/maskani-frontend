@@ -51,7 +51,7 @@ function Pages() {
   return (
     <>
         <Router>
-            <Header isLoggedIn={isLoggedIn}/>
+            {/* <Header isLoggedIn={isLoggedIn}/> */}
             <Routes>
                 <Route exact path='/auth' element={<Auth setIsLoggedIn={setIsLoggedIn}/>} />
                 <Route exact path='/profile' element={<Profile user={user} isLoggedIn={isLoggedIn}/>} />

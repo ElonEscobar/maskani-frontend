@@ -1,47 +1,91 @@
-import React from 'react'
-import './contact.css'
-import emailjs from '@emailjs/browser';
-import {useRef} from 'react'
-// import IMG1 from '../assets/illustration@2x-85cce263ddf60035c6702cc57dd1fc2a-4d4c8.jpg'
+import React from "react";
+import "./contact.css"
 
-function Contact() {
+function contact(){
 
-  const sendEmail = (e) => {
-    e.prventDefault();
-    emailjs.sendForm('service_8c1mcvk', 'template_7lo643t', form.current, 'zEgGGsirEpKj4kZql')
-    e.target.reset()
-  }
+  return(
+    <div className="container">
+      <h1>Contact us</h1>
+      <p className="sub-title">Lorem ipsum</p>
 
-  const form = useRef();
+      <div id="contact-container">
+        <div className="contact-info">
+            <h4 >
+              contact information
+            </h4>
 
-  return (
-   <section>
-    
-    <div className="contact-container">
-      
-      <form className='contact-form' ref={form} onSubmit={sendEmail}>
-        <h1>Talk to us?</h1>
+            <p>fill up the form and the click send</p>
 
- 
-        <input className='contact-input' type='text' name='name' placeholder='Your full name' required/>
-        
-        <input className='contact-input' type='email' name='email' placeholder='Your email address' required/>
-         
-        <textarea className='contact-textarea' name='message' rows="10" placeholder='Message...' required></textarea>
-        <button className='contact-btn'>Send message</button>
-      </form>
+            <div className="icon-text">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>0712-345-678</span>
+            </div>
+
+            <div className="icon-text">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <span>adminmaskan@gmail.com</span>
+            </div>
+
+            <div className="icon-text">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>Nairobi,Kenya</span>
+            </div>
+
+            
+
+            <div className="social-media">
+              <a href="#" className="icon-circle">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+
+              <a href="#" className="icon-circle">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+
+              <a href="#" className="icon-circle">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+        </div>
+
+        <form className="form">
+          <div className="col-2">
+
+            <div className="form-group">
+              <label>first name</label>
+              <input className="input" type="text"/>
+            </div>
+
+            
+
+            <div className="form-group">
+              <label>Email</label>
+              <input className="input" type="email"/>
+            </div>
+          </div>
+
+
+           <div className="col-2">
+           <div className="form-group solo">
+              <label>message</label>
+              <textarea></textarea>
+            </div>
+
+           </div>
+
+
+          <div className="col-2">
+           <div className="form-group right">
+           <button className="primary">send message</button>
+           </div>
+          </div>
+
+
+        </form>
+      </div>
+
     </div>
-    <div className='contact-pic'>
-    <img src='https://marvelapp.com/static/illustration@2x-85cce263ddf60035c6702cc57dd1fc2a-4d4c8.jpg' alt='contact-pic'/>
-
-    </div>
-   
-  
-   </section>
-
-  
-   
   )
 }
 
-export default Contact
+export default contact
