@@ -6,7 +6,7 @@ function contact(){
   return(
     <div className="container">
       <h1>Contact us</h1>
-      <p className="sub-title">Lorem ipsum</p>
+      <p className="sub-title">MASKAN SOCIALS</p>
 
       <div id="contact-container">
         <div className="contact-info">
@@ -34,15 +34,15 @@ function contact(){
             
 
             <div className="social-media">
-              <a href="#" className="icon-circle">
+              <a  className="icon-circle">
               <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
 
-              <a href="#" className="icon-circle">
+              <a   className="icon-circle">
               <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
 
-              <a href="#" className="icon-circle">
+              <a className="icon-circle">
               <i class="fa fa-youtube" aria-hidden="true"></i>
               </a>
             </div>
