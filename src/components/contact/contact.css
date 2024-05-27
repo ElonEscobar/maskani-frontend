@@ -165,7 +165,8 @@ button {
   width: 200px;
   height: 60px;
   cursor: pointer;
-  background: white;
+  color: antiquewhite;
+  background: #05f7ff;
   border: none;
   text-transform: uppercase;
   border-radius: 10px;
